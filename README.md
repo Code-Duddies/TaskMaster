@@ -58,4 +58,3 @@ The To-Do List web application allows users to add tasks, mark them as completed
 ### Optional Enhancements:
 - Implement additional features such as editing tasks, sorting tasks by priority, or adding due dates.
 - Improve the user interface with animations or transitions using CSS.
-- More simple I guess but I'd say its a pretty god project nonetheless
