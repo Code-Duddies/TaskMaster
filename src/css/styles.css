@@ -1,168 +1,55 @@
 body {
-    background-color: #000;
-    color: #ffd700;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    text-align: center;
-    width: 400px;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+  text-align: center;
 }
 
-.task-input {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+input[type='text'] {
+  width: calc(100% - 80px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-#taskInput {
-    padding: 10px;
-    width: 300px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: 1em;
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-#addTaskBtn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ffd700;
-    color: #000;
-    cursor: pointer;
-    font-size: 1em;
-    transition: transform 0.3s;
+button:hover {
+  background-color: #0056b3;
 }
 
-#addTaskBtn:hover {
-    transform: scale(1.1);
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-#taskList {
-    list-style: none;
-    padding: 0;
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
-.task-item {
-    background-color: #222;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    position: relative;
-    transition: transform 0.3s;
+.completed {
+  text-decoration: line-through;
+  color: #888;
 }
-
-.task-item:hover {
-    transform: scale(1.02);
-}
-
-.task-item .task-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.task-item .task-controls span,
-.subtask-item span {
-    flex-grow: 1;
-    text-align: left;
-    max-width: 70%; /* Adjust as needed */
-    overflow-wrap: break-word; /* Wrap long text */
-}
-
-.task-item .collapse-btn {
-    background-color: #ffd700;
-    border: none;
-    color: #000;
-    cursor: pointer;
-    font-size: 1em;
-    padding: 5px;
-    border-radius: 50%;
-    margin-left: 10px;
-}
-
-.task-item .delete-task-btn {
-    background-color: transparent;
-    border: none;
-    color: #ff0000;
-    cursor: pointer;
-    font-size: 1.2em;
-}
-
-.subtask-container {
-    display: none;
-    margin-top: 10px;
-}
-
-.subtask-input {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.subtask-input input {
-    padding: 5px;
-    width: 200px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: 0.9em;
-}
-
-.subtask-input button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ffd700;
-    color: #000;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: transform 0.3s;
-}
-
-.subtask-input button:hover {
-    transform: scale(1.1);
-}
-
-.subtask-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-.show {
-    display: block;
-}
-
-.subtask-item {
-    background-color: #333;
-    margin-bottom: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    position: relative;
-    font-size: 0.9em;
-}
-
-.subtask-item button {
-    background-color: transparent;
-    border: none;
-    color: #ff0000;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    z-index: 1; /* Ensure it's above the text */
-}
-
