@@ -16,6 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
     function addTask() {
         const taskText = taskInput.value.trim();
         if (taskText === '') return;
+        const liTasks = taskList.getElementsByClassName('task-item');
+
+        const isSameTask = Array.from(liTasks).find((e) =>{
+            const textContent = e.querySelector('span').textContent;
+            if(taskText == textContent) return true;
+        })
+
+        if(isSameTask) {
+            taskInput.value = '';
+            alert("This task already exists!");
+            return
+
+        }
 
         const taskItem = createTaskItem(taskText);
         taskList.appendChild(taskItem);
